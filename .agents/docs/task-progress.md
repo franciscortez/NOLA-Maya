@@ -8,16 +8,16 @@
 
 ---
 
-## 1. 🔐 OAuth & Authentication [ ]
+## 1. 🔐 OAuth & Authentication [x]
 
 > GHL OAuth flow for connecting sub-accounts to this app.
 
-- [ ] OAuth callback endpoint (`/oauth/callback`)
-- [ ] Exchange authorization code for access/refresh tokens
-- [ ] Save tokens to `location_tokens` table
-- [ ] Redirect to provider config page after OAuth
-- [ ] Auto-refresh expired tokens — `GhlService::refreshToken()` should exist and be called automatically via middleware
-- [ ] Token expiry check middleware — Validate token freshness before any GHL API call
+- [x] OAuth callback endpoint (`/oauth/callback`)
+- [x] Exchange authorization code for access/refresh tokens
+- [x] Save tokens to `location_tokens` table
+- [x] Redirect to provider config page after OAuth
+- [x] Auto-refresh expired tokens — `GhlService::refreshToken()` should exist and be called automatically via middleware
+- [x] Token expiry check middleware — Validate token freshness before any GHL API call
 
 ### [ ] 1️⃣ Priority: Multi-location & Error Handling
 
@@ -36,8 +36,8 @@
 > Registering/removing NOLA Maya as a custom payment provider in GHL.
 > This supports multiple Maya accounts by allowing locations to provision their own credentials.
 
-- [ ] Register custom provider in GHL (`ProviderConfigService::registerCustomProvider`)
-- [ ] Provider config UI (`/provider/config`) — Direct page for users to input Maya API keys
+- [x] Register custom provider in GHL (`ProviderConfigService::registerCustomProvider`)
+- [x] Provider config UI (`/provider/config`) — Direct page for users to input Maya API keys
 - [ ] Push Maya API keys via Connect Config API
 - [ ] Map Maya credentials properly into GHL config fields (secret key / public key for test and live)
 - [ ] Delete provider from GHL
