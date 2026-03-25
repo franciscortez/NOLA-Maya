@@ -20,7 +20,7 @@ class GhlOauthController extends Controller
 
     /**
      * Redirect the user to the GoHighLevel OAuth page.
-     * Supports ?whitelabel=1 for white-label marketplaces.
+     * Accepts 'whitelabel' query parameter (true/1/yes) for white-label marketplaces.
      */
     public function install(Request $request): RedirectResponse
     {
@@ -39,7 +39,6 @@ class GhlOauthController extends Controller
 
             return redirect()->route('config.show', ['location_id' => $locationToken->location_id])
                 ->with('success', 'GoHighLevel successfully connected!');
-
         } catch (Exception $e) {
             Log::error('GHL OAuth Callback Error: ' . $e->getMessage(), [
                 'trace' => $e->getTraceAsString()

@@ -38,6 +38,7 @@
 
 - [x] Register custom provider in GHL (`ProviderConfigService::registerCustomProvider`)
 - [x] Provider config UI (`/provider/config`) — Direct page for users to input Maya API keys
+- [x] Refactor ProviderConfig to Service + Request pattern
 - [ ] Push Maya API keys via Connect Config API
 - [ ] Map Maya credentials properly into GHL config fields (secret key / public key for test and live)
 - [ ] Delete provider from GHL
@@ -193,6 +194,7 @@
 ## 8. 📦 Maya Credentials & Merchant Setup [ ]
 
 > Maya-specific operational preresquisites required before development and production launch.
+> **Reference**: [Maya API Environments](https://developers.maya.ph/reference/api-environments)
 
 - [ ] Complete Maya Checkout onboarding
 - [ ] Confirm access to Maya Business Manager or Maya Manager 1.0
@@ -201,6 +203,7 @@
 - [ ] Confirm which Maya products are enabled for this merchant account (Checkout, Vault, Auth/Capture, etc.)
 - [ ] Confirm which payment methods are enabled for the merchant account
 - [ ] Confirm webhook registration process for sandbox and production
+- [ ] Verify webhook IP allowlisting based on Maya's published Webhook IP Addresses per environment
 - [ ] Document who owns Maya account operations, key rotation, and go-live coordination
 
 ---

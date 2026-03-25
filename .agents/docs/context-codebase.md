@@ -139,6 +139,16 @@ Maya handles secure payment capture via three primary products: **Checkout**, **
 - **3DS Authentication**: Automatically handled for cards depending on the issuing bank.
 - **Customizable**: Supports merchant branding (logo/name) in the hosted UI.
 
+### API Environments
+- **Sandbox**:
+  - API Domain: `https://pg-sandbox.paymaya.com`
+  - Hosted Payment Page: `https://payments-web-sandbox.paymaya.com`
+  - Manager: `https://manager-sandbox.paymaya.com`
+- **Production**:
+  - API Domain: `https://pg.maya.ph`
+  - Hosted Payment Page: `https://payments.maya.ph`
+  - Manager: `https://manager.paymaya.com`
+
 ### 2. Pay with Maya (Express)
 
 - **Maya Wallet Login**: Customers pay by logging into their Maya account.
@@ -252,6 +262,7 @@ The project follows a structured **MVC + Service Layer** pattern to ensure separ
 -   **Modular**: Maya and GHL logic are isolated in their respective services.
 -   **Testable**: Services can be unit-tested independently of the HTTP layer.
 -   **Clean Controllers**: Controllers remain "thin" and focused only on request/response handling.
+-   **Readability First**: Always use **Form Requests** for validation, **Services** for business logic, and **Logs** for tracking actions. This ensures a clean, searchable, and maintainable codebase.
 
 ---
 
